@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Diagnóstico do Escritório</title>
+<title>Diagnóstico da Imobiliária</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600&display=swap">
@@ -66,9 +66,9 @@ button{font:inherit;font-weight:600;border-radius:10px;padding:12px 18px;cursor:
 <div class="wrap">
 <header>
   <span class="eyebrow">Diagnóstico de Automação · Layla Viana</span>
-  <h1>Como funciona a rotina do seu escritório?</h1>
+  <h1>Como funciona a rotina da sua imobiliária?</h1>
   <p class="lead">Estas respostas são a base do diagnóstico. Leva cerca de 15 minutos. Responda com números aproximados; não precisa ser exato.</p>
-  <p class="note">Por sigilo profissional e LGPD, não inclua nomes de clientes, números de processos nem dados pessoais. Só informações gerais sobre a operação. As respostas ficam salvas neste navegador enquanto você preenche, e só chegam até mim quando você enviar no final.</p>
+  <p class="note">Não inclua dados de clientes, inquilinos ou proprietários (nomes, CPF, endereços). Só informações gerais sobre a operação. As respostas ficam salvas neste navegador enquanto você preenche, e só chegam até mim quando você enviar no final.</p>
 </header>
 
 <div class="progress" aria-live="polite"><div class="bar"><span id="barfill"></span></div><span id="bartext">0 de 6 etapas</span></div>
@@ -76,103 +76,93 @@ button{font:inherit;font-weight:600;border-radius:10px;padding:12px 18px;cursor:
 <form id="f" novalidate>
 
 <section data-step>
-  <h2><span class="n">1</span> Sobre o escritório</h2>
+  <h2><span class="n">1</span> Sobre a imobiliária</h2>
   <div class="row">
-    <div class="field"><label for="nome_esc">Nome do escritório</label><input id="nome_esc" name="Nome do escritório" type="text"></div>
-    <div class="field"><label for="cidade">Cidade</label><input id="cidade" name="Cidade" type="text"></div>
+    <div class="field"><label for="nome_empresa">Nome da imobiliária</label><input id="nome_empresa" name="Nome da imobiliária" type="text"></div>
+    <div class="field"><label for="cidade">Cidade e bairros de atuação</label><input id="cidade" name="Cidade e bairros" type="text"></div>
   </div>
   <div class="row">
-    <div class="field"><label for="equipe">Pessoas na equipe <span class="hint">advogados, estagiários, administrativo</span></label><input id="equipe" name="Tamanho da equipe" type="text" placeholder="Ex.: 3 advogados, 2 estagiários, 1 adm."></div>
-    <div class="field"><label for="processos">Processos ativos (aprox.)</label><input id="processos" name="Processos ativos" type="number" min="0" inputmode="numeric"></div>
+    <div class="field"><label for="anos">Tempo de mercado (anos)</label><input id="anos" name="Tempo de mercado (anos)" type="number" min="0" inputmode="numeric"></div>
+    <div class="field"><label for="equipe">Pessoas na equipe <span class="hint">corretores, administrativo, financeiro</span></label><input id="equipe" name="Tamanho da equipe" type="text" placeholder="Ex.: 4 corretores, 2 adm., 1 financeiro"></div>
   </div>
   <div class="field"><span class="q">Áreas de atuação</span>
     <div class="chips" role="group" aria-label="Áreas de atuação">
-      <label class="chip"><input type="checkbox" id="a0" name="Áreas de atuação" value="Cível"><span>Cível</span></label>
-      <label class="chip"><input type="checkbox" id="a1" name="Áreas de atuação" value="Trabalhista"><span>Trabalhista</span></label>
-      <label class="chip"><input type="checkbox" id="a2" name="Áreas de atuação" value="Tributário"><span>Tributário</span></label>
-      <label class="chip"><input type="checkbox" id="a3" name="Áreas de atuação" value="Previdenciário"><span>Previdenciário</span></label>
-      <label class="chip"><input type="checkbox" id="a4" name="Áreas de atuação" value="Família e sucessões"><span>Família e sucessões</span></label>
-      <label class="chip"><input type="checkbox" id="a5" name="Áreas de atuação" value="Empresarial"><span>Empresarial</span></label>
-      <label class="chip"><input type="checkbox" id="a6" name="Áreas de atuação" value="Consumidor"><span>Consumidor</span></label>
-      <label class="chip"><input type="checkbox" id="a7" name="Áreas de atuação" value="Imobiliário"><span>Imobiliário</span></label>
-      <label class="chip"><input type="checkbox" id="a8" name="Áreas de atuação" value="Criminal"><span>Criminal</span></label>
-      <label class="chip"><input type="checkbox" id="a9" name="Áreas de atuação" value="Bancário / cobrança"><span>Bancário / cobrança</span></label>
+      <label class="chip"><input type="checkbox" id="area_loc" name="Áreas de atuação" value="Locação / administração"><span>Locação / administração</span></label>
+      <label class="chip"><input type="checkbox" id="area_venda" name="Áreas de atuação" value="Venda"><span>Venda</span></label>
+      <label class="chip"><input type="checkbox" id="area_lanc" name="Áreas de atuação" value="Lançamentos"><span>Lançamentos</span></label>
+      <label class="chip"><input type="checkbox" id="area_temp" name="Áreas de atuação" value="Temporada"><span>Temporada</span></label>
+      <label class="chip"><input type="checkbox" id="area_cond" name="Áreas de atuação" value="Condomínios"><span>Condomínios</span></label>
     </div>
   </div>
   <div class="row">
-    <div class="field"><label for="casos_mes">Casos novos por mês (aprox.)</label><input id="casos_mes" name="Casos novos por mês" type="number" min="0" inputmode="numeric"></div>
-    <div class="field"><label for="perfil">Perfil dos clientes <span class="hint">pessoa física, empresas, contencioso de massa…</span></label><input id="perfil" name="Perfil dos clientes" type="text"></div>
+    <div class="field"><label for="imoveis">Imóveis administrados (locação)</label><input id="imoveis" name="Imóveis administrados" type="number" min="0" inputmode="numeric"></div>
+    <div class="field"><label for="vendas">Vendas por mês (aprox.)</label><input id="vendas" name="Vendas por mês" type="number" min="0" inputmode="numeric"></div>
   </div>
 </section>
 
 <section data-step>
-  <h2><span class="n">2</span> Captação e atendimento</h2>
-  <div class="field"><span class="q">Por onde chegam os clientes?</span>
-    <div class="chips" role="group" aria-label="Por onde chegam os clientes?">
-      <label class="chip"><input type="checkbox" id="c0" name="Canais de entrada" value="WhatsApp"><span>WhatsApp</span></label>
-      <label class="chip"><input type="checkbox" id="c1" name="Canais de entrada" value="Instagram"><span>Instagram</span></label>
-      <label class="chip"><input type="checkbox" id="c2" name="Canais de entrada" value="Site"><span>Site</span></label>
-      <label class="chip"><input type="checkbox" id="c3" name="Canais de entrada" value="Indicação"><span>Indicação</span></label>
-      <label class="chip"><input type="checkbox" id="c4" name="Canais de entrada" value="Telefone"><span>Telefone</span></label>
-      <label class="chip"><input type="checkbox" id="c5" name="Canais de entrada" value="Parcerias / correspondentes"><span>Parcerias / correspondentes</span></label>
+  <h2><span class="n">2</span> Atendimento e leads</h2>
+  <div class="field"><span class="q">Por onde chegam os interessados?</span>
+    <div class="chips" role="group" aria-label="Canais">
+      <label class="chip"><input type="checkbox" id="c_wpp" name="Canais de entrada" value="WhatsApp"><span>WhatsApp</span></label>
+      <label class="chip"><input type="checkbox" id="c_insta" name="Canais de entrada" value="Instagram"><span>Instagram</span></label>
+      <label class="chip"><input type="checkbox" id="c_portais" name="Canais de entrada" value="Portais (ZAP, Viva Real, OLX etc.)"><span>Portais (ZAP, Viva Real, OLX…)</span></label>
+      <label class="chip"><input type="checkbox" id="c_site" name="Canais de entrada" value="Site próprio"><span>Site próprio</span></label>
+      <label class="chip"><input type="checkbox" id="c_tel" name="Canais de entrada" value="Telefone"><span>Telefone</span></label>
+      <label class="chip"><input type="checkbox" id="c_ind" name="Canais de entrada" value="Indicação / placa"><span>Indicação / placa</span></label>
     </div>
   </div>
   <div class="row">
-    <div class="field"><label for="contatos">Contatos novos por mês (aprox.)</label><input id="contatos" name="Contatos novos por mês" type="number" min="0" inputmode="numeric"></div>
+    <div class="field"><label for="leads">Contatos novos por mês (aprox.)</label><input id="leads" name="Leads por mês" type="number" min="0" inputmode="numeric"></div>
     <div class="field"><label for="resposta">Tempo até a primeira resposta</label>
       <select id="resposta" name="Tempo até a primeira resposta">
         <option value="">Selecione</option><option>Menos de 15 minutos</option><option>Até 1 hora</option><option>No mesmo dia</option><option>No dia seguinte ou mais</option><option>Não sei</option>
       </select></div>
   </div>
-  <div class="field"><label for="atend">Como é o primeiro atendimento até o cliente fechar contrato? <span class="hint">quem atende, o que pede, quanto tempo leva</span></label><textarea id="atend" name="Atendimento inicial"></textarea></div>
+  <div class="field"><label for="atend">Quem atende e como as visitas são agendadas hoje?</label><textarea id="atend" name="Atendimento e agendamento de visitas"></textarea></div>
 </section>
 
 <section data-step>
   <h2><span class="n">3</span> Sistemas e ferramentas</h2>
-  <div class="field"><label for="software">Software jurídico usado <span class="hint">nome, ou "não usamos"</span></label><input id="software" name="Software jurídico" type="text"></div>
-  <div class="field"><span class="q">Sistemas de tribunal e ferramentas</span>
-    <div class="chips" role="group" aria-label="Sistemas de tribunal e ferramentas">
-      <label class="chip"><input type="checkbox" id="t0" name="Ferramentas e sistemas" value="PJe"><span>PJe</span></label>
-      <label class="chip"><input type="checkbox" id="t1" name="Ferramentas e sistemas" value="e-SAJ"><span>e-SAJ</span></label>
-      <label class="chip"><input type="checkbox" id="t2" name="Ferramentas e sistemas" value="Projudi"><span>Projudi</span></label>
-      <label class="chip"><input type="checkbox" id="t3" name="Ferramentas e sistemas" value="eproc"><span>eproc</span></label>
-      <label class="chip"><input type="checkbox" id="t4" name="Ferramentas e sistemas" value="Planilhas"><span>Planilhas</span></label>
-      <label class="chip"><input type="checkbox" id="t5" name="Ferramentas e sistemas" value="Assinatura eletrônica"><span>Assinatura eletrônica</span></label>
-      <label class="chip"><input type="checkbox" id="t6" name="Ferramentas e sistemas" value="Google (Gmail, Drive)"><span>Google (Gmail, Drive)</span></label>
-      <label class="chip"><input type="checkbox" id="t7" name="Ferramentas e sistemas" value="Microsoft 365"><span>Microsoft 365</span></label>
-      <label class="chip"><input type="checkbox" id="t8" name="Ferramentas e sistemas" value="Muita coisa em papel"><span>Muita coisa em papel</span></label>
+  <div class="field"><label for="sistema">Sistema ou CRM imobiliário <span class="hint">nome, ou "não usamos"</span></label><input id="sistema" name="Sistema / CRM" type="text"></div>
+  <div class="field"><span class="q">O que mais vocês usam?</span>
+    <div class="chips" role="group" aria-label="Ferramentas">
+      <label class="chip"><input type="checkbox" id="t_plan" name="Ferramentas" value="Planilhas"><span>Planilhas</span></label>
+      <label class="chip"><input type="checkbox" id="t_wppb" name="Ferramentas" value="WhatsApp Business"><span>WhatsApp Business</span></label>
+      <label class="chip"><input type="checkbox" id="t_ass" name="Ferramentas" value="Assinatura eletrônica"><span>Assinatura eletrônica</span></label>
+      <label class="chip"><input type="checkbox" id="t_bol" name="Ferramentas" value="Plataforma de boletos / cobrança"><span>Boletos / cobrança</span></label>
+      <label class="chip"><input type="checkbox" id="t_goog" name="Ferramentas" value="Google Workspace"><span>Google (Gmail, Drive)</span></label>
+      <label class="chip"><input type="checkbox" id="t_ms" name="Ferramentas" value="Microsoft 365"><span>Microsoft 365</span></label>
+      <label class="chip"><input type="checkbox" id="t_papel" name="Ferramentas" value="Muita coisa em papel"><span>Muita coisa em papel</span></label>
     </div>
   </div>
-  <div class="field"><label for="publi">Como recebem as publicações e intimações? <span class="hint">serviço de recorte, push dos tribunais, manual…</span></label><input id="publi" name="Controle de publicações" type="text"></div>
 </section>
 
 <section data-step>
   <h2><span class="n">4</span> Rotinas que tomam tempo</h2>
   <div class="field"><span class="q">Marque as tarefas que mais ocupam a equipe</span>
-    <div class="chips" role="group" aria-label="Marque as tarefas que mais ocupam a equipe">
-      <label class="chip"><input type="checkbox" id="r0" name="Tarefas que mais tomam tempo" value="Controle de prazos e publicações"><span>Controle de prazos e publicações</span></label>
-      <label class="chip"><input type="checkbox" id="r1" name="Tarefas que mais tomam tempo" value="Petições padronizadas"><span>Petições padronizadas</span></label>
-      <label class="chip"><input type="checkbox" id="r2" name="Tarefas que mais tomam tempo" value="Cadastro e atendimento inicial de clientes"><span>Cadastro e atendimento inicial de clientes</span></label>
-      <label class="chip"><input type="checkbox" id="r3" name="Tarefas que mais tomam tempo" value="Coleta de documentos dos clientes"><span>Coleta de documentos dos clientes</span></label>
-      <label class="chip"><input type="checkbox" id="r4" name="Tarefas que mais tomam tempo" value="Contratos de honorários"><span>Contratos de honorários</span></label>
-      <label class="chip"><input type="checkbox" id="r5" name="Tarefas que mais tomam tempo" value="Cobrança de honorários"><span>Cobrança de honorários</span></label>
-      <label class="chip"><input type="checkbox" id="r6" name="Tarefas que mais tomam tempo" value="Atualizar clientes sobre o andamento"><span>Atualizar clientes sobre o andamento</span></label>
-      <label class="chip"><input type="checkbox" id="r7" name="Tarefas que mais tomam tempo" value="Protocolos e diligências"><span>Protocolos e diligências</span></label>
-      <label class="chip"><input type="checkbox" id="r8" name="Tarefas que mais tomam tempo" value="Cálculos"><span>Cálculos</span></label>
-      <label class="chip"><input type="checkbox" id="r9" name="Tarefas que mais tomam tempo" value="Organização de documentos e pastas"><span>Organização de documentos e pastas</span></label>
-      <label class="chip"><input type="checkbox" id="r10" name="Tarefas que mais tomam tempo" value="Responder as mesmas perguntas"><span>Responder as mesmas perguntas</span></label>
+    <div class="chips" role="group" aria-label="Tarefas">
+      <label class="chip"><input type="checkbox" id="r_cad" name="Tarefas que mais tomam tempo" value="Cadastro e divulgação de imóveis"><span>Cadastro e divulgação de imóveis</span></label>
+      <label class="chip"><input type="checkbox" id="r_anal" name="Tarefas que mais tomam tempo" value="Análise cadastral de inquilinos"><span>Análise cadastral de inquilinos</span></label>
+      <label class="chip"><input type="checkbox" id="r_contr" name="Tarefas que mais tomam tempo" value="Elaboração de contratos"><span>Contratos</span></label>
+      <label class="chip"><input type="checkbox" id="r_vist" name="Tarefas que mais tomam tempo" value="Vistorias e laudos"><span>Vistorias</span></label>
+      <label class="chip"><input type="checkbox" id="r_cob" name="Tarefas que mais tomam tempo" value="Cobrança e inadimplência"><span>Cobrança e inadimplência</span></label>
+      <label class="chip"><input type="checkbox" id="r_rep" name="Tarefas que mais tomam tempo" value="Repasse e prestação de contas a proprietários"><span>Repasse a proprietários</span></label>
+      <label class="chip"><input type="checkbox" id="r_reaj" name="Tarefas que mais tomam tempo" value="Reajustes e renovações"><span>Reajustes e renovações</span></label>
+      <label class="chip"><input type="checkbox" id="r_manut" name="Tarefas que mais tomam tempo" value="Pedidos de manutenção"><span>Pedidos de manutenção</span></label>
+      <label class="chip"><input type="checkbox" id="r_atend" name="Tarefas que mais tomam tempo" value="Responder as mesmas perguntas"><span>Responder as mesmas perguntas</span></label>
     </div>
   </div>
   <div class="field"><label for="top5">Descreva as 5 tarefas que mais tomam tempo toda semana <span class="hint">e quantas horas, mais ou menos</span></label><textarea id="top5" name="Top 5 tarefas (com horas)"></textarea></div>
-  <div class="field"><label for="passo">Quais delas seguem sempre o mesmo passo a passo? <span class="hint">ex.: a mesma petição com dados diferentes</span></label><textarea id="passo" name="Tarefas repetitivas"></textarea></div>
+  <div class="field"><label for="passo">Quais delas seguem sempre o mesmo passo a passo?</label><textarea id="passo" name="Tarefas repetitivas"></textarea></div>
 </section>
 
 <section data-step>
-  <h2><span class="n">5</span> Erros e riscos</h2>
-  <div class="field"><label for="erros">Onde acontecem mais erros ou retrabalho? <span class="hint">prazo perdido ou em cima da hora, documento faltando, petição com dado errado…</span></label><textarea id="erros" name="Erros e retrabalho"></textarea></div>
+  <h2><span class="n">5</span> Erros e gargalos</h2>
+  <div class="field"><label for="erros">Onde acontecem mais erros ou retrabalho? <span class="hint">documento faltando, contrato com dado errado, prazo perdido…</span></label><textarea id="erros" name="Erros e retrabalho"></textarea></div>
   <div class="row">
-    <div class="field"><label for="prazos">Prazos por semana (aprox.)</label><input id="prazos" name="Prazos por semana" type="number" min="0" inputmode="numeric"></div>
-    <div class="field"><label for="inad">Inadimplência de honorários (aprox., %)</label><input id="inad" name="Inadimplência de honorários (%)" type="number" min="0" max="100" inputmode="decimal"></div>
+    <div class="field"><label for="inad">Inadimplência mensal (aprox., %)</label><input id="inad" name="Inadimplência (%)" type="number" min="0" max="100" inputmode="decimal"></div>
+    <div class="field"><label for="contratos">Contratos novos por mês (aprox.)</label><input id="contratos" name="Contratos novos por mês" type="number" min="0" inputmode="numeric"></div>
   </div>
 </section>
 
@@ -180,7 +170,7 @@ button{font:inherit;font-weight:600;border-radius:10px;padding:12px 18px;cursor:
   <h2><span class="n">6</span> Limites, expectativas e contato</h2>
   <div class="field"><label for="nao">O que você <strong>não</strong> quer automatizado de jeito nenhum?</label><textarea id="nao" name="Não automatizar"></textarea></div>
   <div class="field"><label for="tentou">Já tentaram alguma automação ou IA? O que funcionou e o que não funcionou?</label><textarea id="tentou" name="Experiências anteriores"></textarea></div>
-  <div class="field"><label for="tresmeses">Se o diagnóstico der certo, o que muda no escritório daqui a 3 meses?</label><textarea id="tresmeses" name="Resultado esperado em 3 meses"></textarea></div>
+  <div class="field"><label for="tresmeses">Se o diagnóstico der certo, o que muda na imobiliária daqui a 3 meses?</label><textarea id="tresmeses" name="Resultado esperado em 3 meses"></textarea></div>
   <div class="row">
     <div class="field"><label for="resp">Seu nome</label><input id="resp" name="Respondido por" type="text"></div>
     <div class="field"><label for="cargo">Cargo</label><input id="cargo" name="Cargo" type="text"></div>
@@ -213,7 +203,7 @@ button{font:inherit;font-weight:600;border-radius:10px;padding:12px 18px;cursor:
 <script>
 (function(){
   const form = document.getElementById('f');
-  const KEY = 'diag-escr-v1';
+  const KEY = 'diag-imob-v1';
   const steps = [...document.querySelectorAll('[data-step]')];
 
   function save(){
@@ -239,7 +229,7 @@ button{font:inherit;font-weight:600;border-radius:10px;padding:12px 18px;cursor:
     document.getElementById('bartext').textContent=done+' de '+steps.length+' etapas';
   }
   function summary(){
-    const lines=['*Diagnóstico de Automação — respostas do escritório*',''];
+    const lines=['*Diagnóstico de Automação — respostas da imobiliária*',''];
     steps.forEach(s=>{
       const title=s.querySelector('h2').textContent.replace(/^\s*\d+\s*/,'').trim();
       const block=[]; const groups={};
